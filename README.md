@@ -1,4 +1,4 @@
-# Shorturl
+# Classified email filter
 
 Classified Email Filter is a web application built with Laravel. It is developed as an API microservice. It's main use is to detect and mask any classified words and phrases in an email body.
 
