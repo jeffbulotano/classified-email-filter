@@ -50,6 +50,10 @@ Your app is now ready!
 
 ADDITIONAL NOTE: I understand that the API route is overkill for the use case. However, I decided to go this route for demonstration. To implement the solution to an existing system ClassifiedEmailService class can be copied and instantiated accordingly. Or, ClassifiedEmailService@filterClassifiedEmail method can be converted to a helper if needed.
 
+## DEMO
+
+If you open the homepage of the application, you can find a basic demo form that you can use to test the functionality.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
