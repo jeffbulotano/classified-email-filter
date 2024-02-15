@@ -44,20 +44,21 @@ class ClassifiedEmailFilterTest extends TestCase
     }
 
     /**
-     * Test that the filter classified email endpoint returns correct json response
+     * Test that results are correct when classified word or phrase is found
      */
-    // public function test_api_endpoint_returns_correct_json_response(): void
-    // {
-    //     $response = $this->post(
-    //         'api/filter-classified-email',
-    //         [
-    //             'classified_words_phrases' => ['word', 'classified phrase'],
-    //             'email_text' => 'Email body.'
-    //         ]
-    //     );
+    public function test_that_response_values_are_correct_when_phrase_is_found(): void
+    {
+        $response = $this->post(
+            'api/filter-classified-email',
+            [
+                'classified_words_phrases' => ['word', 'classified phrase'],
+                'email_text' => 'Email body that has classified phrase.'
+            ]
+        );
 
-    //     $response->assertJson(function (AssertableJson $json) {
-    //         $json->hasAll(['is_classified', 'censored_text']);
-    //     });
-    // }
+        $response->assertExactJson([
+            'is_classified' => true,
+            'censored_text' => 'Email body that has *****.'
+        ]);
+    }
 }

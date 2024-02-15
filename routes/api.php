@@ -23,4 +23,4 @@ use App\Http\Controllers\ClassifiedEmailController;
  * Route to filter classified email
  * NOTE: For demonstration purposes, this is a public endpoint that does not require authentication
  */
-Route::post('filter-classified-email', [ClassifiedEmailController::class, 'filterClassfiedEmail']);
+Route::post('filter-classified-email', [ClassifiedEmailController::class, 'filterClassifiedEmail']);

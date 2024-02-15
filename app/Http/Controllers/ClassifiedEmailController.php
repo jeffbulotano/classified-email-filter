@@ -17,9 +17,9 @@ class ClassifiedEmailController extends Controller
     {
     }
 
-    public function filterClassfiedEmail(FilterClassifiedEmailRequest $request)
+    public function filterClassifiedEmail(FilterClassifiedEmailRequest $request)
     {
-        $responseData = $this->classifiedEmailService->filterClassfiedEmail(
+        $responseData = $this->classifiedEmailService->filterClassifiedEmail(
             $request->classified_words_phrases,
             $request->email_text
         );
